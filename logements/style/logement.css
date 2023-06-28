@@ -1,0 +1,137 @@
+.banner {
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    
+  }
+  
+  .banner h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Californian FB'
+  }
+#voir{
+    margin-left: 20px;
+    position: relative;
+    background-color: #FFBD99;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Californian FB';
+}
+ #modifie{
+  margin-left: 20px;
+    position: relative;
+    background-color:green;
+    color: white;
+    font-weight: bold;
+    font-family: 'Californian FB';
+    border-radius: 5px;
+}
+ #sup{
+    position: relative;
+    background-color: red;
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Californian FB';
+    border-radius: 5px;
+}
+.logement_dash{
+    margin-top: 30px;
+    position: relative;
+    border: solid 1px black;
+    width: 550px;
+    height: 80px;
+    margin-left: 900px;
+    border-radius: 6px;
+}
+
+#new{
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    position: absolute;
+    font-size: 30px;
+    margin-top: -180px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 40px;
+    font-family: 'Californian FB';
+}
+#back{
+    border-radius: 5px;
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    font-size: 30px;
+    position: absolute;
+    font-weight: bold;
+    height: 50px;
+    margin-left: 40px;
+    margin-top: -100px;
+    font-family: 'Californian FB';
+}
+
+
+#myVideo{
+    width: 50%;
+    position: absolute;
+    margin-top: -640px;
+    margin-left: 40px;
+   
+}
+
+footer {
+    background-color: #666565;
+    padding: 20px 0;
+    position: relative;
+    height: 100px;
+    margin-top: 80px;
+  }
+  
+  .footer-links ul,
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 100px;
+  }
+  
+  .footer-links li,
+  .footer-social li {
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+  
+  .footer-links a,
+  .footer-social a {
+    text-decoration: none;
+    color: white;
+    margin-left: 100px;
+  }
+  
+  .footer-social i {
+    font-size: 24px;
+    color: white;
+    margin-left: 100px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  .Newlogement {
+    position:absolute;
+    right: 2vw;
+    background-color:#FFBD99;
+    color: #8F3D4C;
+    font-weight: bold;
+    font-family: 'Californian FB';
+    border-radius: 5px;
+    font-size: medium;
+    padding: 5px;
+  }

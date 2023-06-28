@@ -1,0 +1,117 @@
+
+                        /* Firefox */
+            input.price[type=number] {
+                -moz-appearance: textfield;
+            }
+            
+            /* Chrome */
+            input.price::-webkit-inner-spin-button,
+            input.price::-webkit-outer-spin-button { 
+                -webkit-appearance: none;
+                margin:0;
+            }
+            
+            /* Opéra*/
+            input.price::-o-inner-spin-button,
+            input.price::-o-outer-spin-button { 
+                -o-appearance: none;
+                margin:0
+            }
+            
+      
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #ddd;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #ccc;
+        }
+
+        .image-container {
+            background: #fdfdfd;
+            box-shadow: inset 20px 20px 60px #eee,
+                        inset -20px -20px 60px #f5f5f5;
+            border-radius: 10px;
+            height: 230px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 10px;
+        }
+
+        #images-list {
+            overflow-x: auto;
+            overflow-y: hidden;
+            list-style: none; /* Supprimer les puces de la liste */
+            white-space: nowrap; /* Empêcher le retour à la ligne des éléments de la liste */
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            padding: 5px;
+        }
+        
+        .image-preview {
+            min-width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 1px 1px 4px #0002
+        }
+
+        .image-preview header {
+            width: 190px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            column-gap: 5px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 0 5px;
+        }
+
+        .image-preview header .preview-name-container {
+            position: relative;
+            flex: 1;
+            color: black;
+            font-size: small;
+            overflow: hidden;
+        }
+
+        .image-preview header .preview-name-container .preview-name-overlay {
+            position: absolute;
+            z-index: 1;
+            height: 40px;
+            width: 20px;
+            top: 0;
+            right: 0;
+            background: linear-gradient(to right, transparent, #fff);;
+        }
+
+        .delete-button {
+            height: 30px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            opacity: 0.6;
+        }
+        .delete-button:hover {
+            opacity: 1;
+        }
+
+        .image-preview img {
+            width: 200px;
+            height: 160px;
+            object-fit: cover;
+        }

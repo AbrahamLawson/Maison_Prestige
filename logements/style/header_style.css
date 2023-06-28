@@ -1,0 +1,74 @@
+a #compte{
+    height: 20px;
+    width: 20px;
+}
+a #log{
+    height: 20px;
+    width: 20px;
+}
+.lien #ax{
+    position: absolute;
+    color: black;   
+    text-decoration: none;
+    margin-left: 80vw;
+    margin-top: -50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.lien #ay{
+    position: absolute;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    margin-left: 90vw;
+    margin-top: -50px;
+    font-weight: bold;
+}
+
+    nav{
+        border: solid 1px black;
+        border-radius: 8px;
+       
+    }
+    li:not(.liste_avantages li){
+  float: left;
+  color: white;
+}
+
+ li:not(.liste_avantages li) a {
+    position: relative;
+  
+  display: flex;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul:not(ul.liste_avantages,ul#images-list) {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-left: 100px;
+  margin-top: -60px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 18px;
+}
+.banner {
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    
+  }
+  
+  .banner h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Californian FB'
+  }

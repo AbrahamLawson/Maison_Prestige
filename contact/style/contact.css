@@ -1,0 +1,98 @@
+.banner {
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  .banner h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Californian FB'
+  }
+
+  .container {
+
+   width: 500px;
+   height:auto ;
+    margin: 0 auto;
+    position: relative;
+    border: solid 1px black;
+    margin-top: 30px;
+    border-radius: 6px;
+}
+label, input, textarea, button {
+    display: block;
+    width: 400px;
+    height: 40px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-left: 30px;
+    color: #4E1F3C;
+    font-weight: bold;
+    font-family: 'Footlight MT Light';
+    border-radius: 6px;
+}
+button {
+    padding: 10px;
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 6px;
+}
+.status-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+.success {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.error {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.localise img{
+    position: relative;
+    width: 30vw;
+    height:auto;
+    margin-left: 65vw;
+    margin-top: 10vh;
+    border: solid 1px black;
+
+}
+
+.desc img{
+    width: 50px;
+    height: 50px;
+} 
+.desc{
+    position: relative;
+    margin-left: 530px;
+    font-family:'Footlight MT Light';
+    
+    font-size: 20px;
+    margin-top: 100px;
+}
+.desc h2{
+    font-weight: bold;
+    font-family: 'Californian FB';
+    font-size: 35px;
+    
+}
+
+
+div.br{
+
+    height:15vh;
+}

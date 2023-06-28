@@ -1,0 +1,119 @@
+
+
+#map {
+    height: 500px;
+    flex: 1;
+}
+
+/* Inspirée de https://juliencrego.com/astuces/slider-dimages-en-pur-css/ */
+.slider {
+  width: 800px;
+  margin: 30px auto;
+  position: relative;
+}
+.slider-viewport {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+.slider-content {
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+.slider-content img {
+  width: 800px;
+  height: 400px;
+}
+.slider-nav {
+  position: absolute;
+  width: 100%;
+  bottom: -30px;
+  margin-top: 10px;
+  text-align: center;
+}
+.slider-nav a {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  background-color: #8F3D4C;
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+}
+.slider-nav a:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.8);
+}
+#img2:target .slider-content {
+  -webkit-transform: translateX(-800px);
+          transform: translateX(-800px);
+}
+#img3:target .slider-content {
+  -webkit-transform: translateX(-1600px);
+          transform: translateX(-1600px);
+}
+#img4:target .slider-content {
+  -webkit-transform: translateX(-2400px);
+          transform: translateX(-2400px);
+}
+#img5:target .slider-content {
+  -webkit-transform: translateX(-3200px);
+          transform: translateX(-3200px);
+}
+/* Fin d'inspiration */
+
+        img {
+            border-radius: 15px;
+        }
+           .zoneLogement {
+                display:flex;
+                background:#FFBD99;
+            }
+            .compartimentDeReservation {
+                width:20vw;
+                padding:5px;
+                background:#8F3D4C;
+                margin-right:10px
+            }
+            .compartiment_affichargeLogement{
+                width: 70VW;
+            }
+
+            form.formulaireReservation {
+                padding : 10px;
+                background: #FFBD99;
+                border-radius: 7px;
+               
+            }
+            .compartimentDeReservation .button_Reservation{
+                background-color:#FFBD99 ;
+                font-size: 25px;
+                border-radius: 4px;
+                color: #8F3D4C;
+                font-family: 'Footlight MT Light';
+                position: absolute;
+                padding: 3px 5px;
+            }
+
+           button {
+              background-color:#FFBD99 !important;
+              font-size: 25px;
+              border-radius: 4px;
+              color: #8F3D4C !important;
+              font-family: 'Footlight MT Light';
+            }
+
+            ::-webkit-calendar-picker-indicator{
+                background-color: #8F3D4C;
+                padding: 7px;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+              
+            footer {
+        background-color: #666565;
+        padding: 20px 0;
+        }
