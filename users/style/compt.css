@@ -1,0 +1,66 @@
+.banner {
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    
+  }
+  
+  .banner h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Californian FB'
+  }
+   #but{
+    margin-top: 20px;
+    background-color:#8F3D4C ;
+    font-size: 25px;
+    border-radius: 4px;
+    color: #FFBD99;
+    font-family: 'Footlight MT Light';
+    position: absolute;
+  }
+
+  footer {
+    background-color: #666565;
+    padding: 20px 0;
+    position: relative;
+    height: 100px;
+    margin-top: 100px;
+  }
+  
+  .footer-links ul,
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 100px;
+  }
+  
+  .footer-links li,
+  .footer-social li {
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+  
+  .footer-links a,
+  .footer-social a {
+    text-decoration: none;
+    color: white;
+    margin-left: 100px;
+  }
+  
+  .footer-social i {
+    font-size: 24px;
+    color: white;
+    margin-left: 100px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  

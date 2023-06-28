@@ -1,0 +1,94 @@
+.afficheMessage {
+	background-color: #FFBD99;
+  border-radius: 10px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+	height: 65vh;
+	overflow-y: auto;
+    width: 60VW;
+    margin: auto;
+    padding: 4px;
+  }
+  
+  .message {
+	background-color: #fff;
+	border: 1px solid #8F3D4C;
+  color: #8F3D4C;
+	padding: 5px;
+	margin-bottom: 5px;
+
+  }
+  
+  form textarea {
+    border: 1px solid #8F3D4C;
+    color: #8F3D4C;
+  }
+  .message p {
+	margin: 0; 
+  }
+
+/* Les bulbes inspirées de https://codepen.io/t_afif/pen/eYMbrJN*/
+
+  .message {
+    --r: 10px; /* the radius */
+    --t: 20px; /* the size of the tail */
+    
+    max-width: 20vw;
+    padding: calc(2*var(--r)/3);
+    -webkit-mask: 
+      radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+        var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+      conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+        calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+      radial-gradient(50% 50%,#000 98%,#0000 101%) 
+        0 0/var(--r) var(--r) space padding-box;
+    background: linear-gradient(135deg,#8F3D4C,#1384C5) border-box;
+    color: #fff;
+  }
+  .Destinataire {
+    --_d: 0%;
+    border-left: var(--t) solid #0000;
+    margin-right: var(--t);
+    place-self: start;
+  }
+  .Expediteur {
+    right: 10vw;
+    --_d: 100%;
+    border-right: var(--t) solid #0000;
+    margin-left: 40vw;
+    place-self: end;
+  }
+  
+ 
+  .message strong {
+    font-size: smaller;
+    color: #000;
+  }
+
+  .containerr {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  textarea {
+    font-size: 20px;
+      margin: 11%, 1%;
+      width: 100%;
+      height : 10vh;
+      resize: none;
+  }
+
+  button, input[type="button"], input[type="submit"] {
+    margin: 0px 1vw;
+    background-color:#FFBD99;
+    color: #8F3D4C;
+    font-weight: bold;
+    font-family: 'Californian FB';
+    border-radius: 5px;
+    font-size: medium;
+    padding: 5px;
+  }

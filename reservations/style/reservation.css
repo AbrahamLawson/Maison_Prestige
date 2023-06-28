@@ -1,0 +1,305 @@
+/* .body{
+    background-color: #FBE4CA;
+    margin-top: -10px;
+    width: 100%;
+} */
+.footer{
+    margin-top: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #393336;
+}
+footer h1{
+    color: white;
+    font-family: 'Californian FB';
+    margin-left: 700px;
+    font-weight: bold;
+}
+.body #he{
+  position: absolute;
+   margin-top: 10px;
+   color: #4E1F3C;
+    font-weight: bold;
+    font-family: 'Californian FB';
+    font-size: 30px;
+    /* color: #4E1F3C; */
+}
+.body p{
+  font-family: 'Footlight MT Light';
+}
+#img1{
+    
+    border: solid 1px;
+    border-radius: 20px 1px 1px 20px;
+    position:absolute;
+    height: 500px;
+    width: 550px;
+    margin-left: 230px;
+    margin-top: 50px;
+
+}
+#img2{
+    
+    border: solid 1px;
+    border-radius: 0px;
+    position: absolute;
+    height:  250px;
+    width: 280px;
+    margin-left: 800px;
+    margin-top: 50px;
+}
+#img3{
+    
+  border: solid 1px;
+  border-radius: 1px 20px 1px 1px;
+  position: absolute;
+  height:  250px;
+  width: 250px;
+  margin-left: 1100px;
+  margin-top: 50px;
+}
+#img4{
+    
+  border: solid 1px;
+  border-radius: 0px;
+  position: absolute;
+  height:  230px;
+  width: 280px;
+  margin-left: 800px;
+  margin-top: 320px;
+}
+#img5{
+    
+  border: solid 1px;
+  border-radius: 1px 1px 20px 1px;
+  position: absolute;
+  height:  230px;
+  width: 250px;
+  margin-left: 1100px;
+  margin-top: 320px;
+}
+
+/* .info img{
+    position: absolute;
+    border-radius: 100px 100px 5px 5px;
+    margin-left: 200px;
+    height:  520px;
+    width: 480px;  
+    border: solid 2px grey;
+}  */
+ /* .icone img{
+  width: 30px;
+  height: 30px;
+
+ }
+ 
+ .icone{
+  position: absolute;
+   font-weight: bold;
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #4E1F3C;
+  text-align:justify;
+  border: solid 1px black;
+  width: 400px;
+  border-radius: 8px;
+ }
+
+ .iconne img{
+  width: 30px;
+  height: 30px;
+
+ } */
+ 
+ 
+
+
+
+
+ /* icon like et partager */
+a #liker{
+    height: 20px;
+    width: 20px;
+}
+a #partager{
+    height: 20px;
+    width: 20px;
+}
+.lien #a1{
+    position: absolute;
+    color: #4E1F3C;
+    text-decoration: underline;
+    margin-left: 1130px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: 'Footlight MT Light';
+}
+.lien #a2{
+  font-family: 'Footlight MT Light';
+    position: absolute;
+    color: #4E1F3C;
+    text-decoration: underline;
+    margin-left: 1250px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+#but{
+    background-color:#8F3D4C;
+    font-size: 25px;
+    font-family: 'Footlight MT Light';
+    border-radius: 5px;
+    margin-left: 1200px;
+    margin-top: 555px;
+}
+button a{
+    color:#FFBD99;
+    text-decoration: none;
+}
+.info h3,h4{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Californian FB';
+    margin-left: 0px;
+    color: #4E1F3C;
+}
+.info p{
+    margin-left: 205px;
+    color: #4E1F3C;
+    margin-top: -46px;
+    font-size:19px ;
+}
+
+  .localise img{
+    position: relative;
+    height:  500px;
+    width: 1100px;
+    border: solid 1px gray;
+    margin-left: 250px;
+  }
+   
+.body #separ{
+    border: solid 0.5px black ;
+    
+   }
+   .localise h1,h3{
+    font-family: 'Californian FB';
+    font-weight: bold;
+    color: #4E1F3C;
+   }
+.tableau table, th, td {
+   
+   border-radius: 8px;
+background-color: white;
+  width: 250px;
+  height: 50px;
+  font-weight: bold;
+  color: #4E1F3C;
+  font-family: 'Footlight MT Light';
+}
+ .tableau{
+  /* position: absolute;*/ 
+   margin-left:500px ;
+  margin-top: -450px; 
+  width: 400px;
+  height: 400px;
+  
+} 
+
+.tableau #butt{
+  background-color:#8F3D4C;
+  color: #FFBD99;
+  font-family: 'Footlight MT Light';
+  text-decoration: none;
+  font-size: 23px;
+  border-radius: 5px;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+.tableau #butt1{
+    background-color:#8F3D4C;
+    color: #FFBD99;
+    font-family: 'Footlight MT Light';
+    text-decoration: none;
+    font-size: 23px;
+    border-radius: 5px;
+    margin-left: 28px;
+    margin-top: 10px;
+  }
+
+  .video-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  position: absolute;
+  margin-top: -600px;
+  margin-left: 400px;
+  
+}
+.reservation{
+  position: static;
+    border: solid 1px black;
+    width: 300px;
+    height: 370px;
+    border-radius: 8px;
+    margin-top: 500px;
+    margin-left: -415px;
+}
+
+.reservation p{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-bottom: 28px;
+    
+}
+
+
+video {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 430px;
+  border: solid 1px black;
+}
+
+footer {
+  background-color: #666565;
+  padding: 20px 0;
+  position: relative;
+  height: 100px;
+  margin-top: 50px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 100px;
+}
+
+.footer-links li,
+.footer-social li {
+  display: inline-block;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.footer-links a,
+.footer-social a {
+  text-decoration: none;
+  color: white;
+  margin-left: 100px;
+}
+
+.footer-social i {
+  font-size: 24px;
+  color: white;
+  margin-left: 100px;
+}
+
+p {
+  margin: 0;
+}

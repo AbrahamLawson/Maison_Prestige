@@ -1,0 +1,93 @@
+.banner {
+    background-color: #8F3D4C;
+    color: #FFBD99;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  .banner h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Californian FB'
+  }
+
+  label, input, button {
+    display: block;
+    width: 400px;
+    height: 30px;
+    /* margin-bottom: 05px; */
+    position: relative;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 30px;
+    color: #4E1F3C;
+    font-weight: bold;
+    font-family: 'Footlight MT Light';
+    border-radius: 6px;
+}
+.formulaire h2{
+    color: #4E1F3C;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Californian FB';
+    
+    
+}
+.formulaire {
+  background-color: #DEDDDE;
+  align-content: center;
+  align-items: center;
+    width: 500px;
+    height:auto ;
+     position: relative;
+     border: solid 1px black;
+     margin-top: 3vh;
+     border-radius: 6px;
+     margin: auto;
+ }
+
+
+
+
+ footer {
+  background-color: #666565;
+  padding: 20px 0;
+  position: relative;
+  height: 100px;
+  margin-top: 850px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 100px;
+}
+
+.footer-links li,
+.footer-social li {
+  display: inline-block;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.footer-links a,
+.footer-social a {
+  text-decoration: none;
+  color: white;
+  margin-left: 100px;
+}
+
+.footer-social i {
+  font-size: 24px;
+  color: white;
+  margin-left: 100px;
+}
+
+p {
+  margin: 0;
+}

@@ -1,0 +1,74 @@
+.les_reservations_en_cours_ou_futures {
+    border-radius: 12px;
+    padding:5px 10px;
+    background : orange;
+    width:30VW;
+    margin: 3vh auto;
+}
+        .reservation{
+    border:solid 3px;
+    padding: 2px 3px;
+}
+.reservation:hover{
+    border-radius:4px;
+    margin: 3px 2px;
+    padding: 5px 5px;
+    background:black;
+    border:double 3px white;
+    color:white;
+}
+h2 {
+    text-align:center;
+    text-decoration: overline;
+    color:white;
+}
+div a {
+    color : black;
+    text-decoration:none;
+}
+.banner {
+background-color: #8F3D4C;
+color: #FFBD99;
+padding: 20px;
+text-align: center;
+margin-top: 20px;
+border-radius: 5px;
+
+}
+.banner h1 {
+margin: 0;
+font-size: 34px;
+font-weight: bold;
+font-family: 'Californian FB'
+}
+.containerr {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  button, input[type="button"], input[type="submit"] {
+    margin: 0px 1vw;
+    background-color:#FFBD99;
+    color: #8F3D4C;
+    font-weight: bold;
+    font-family: 'Californian FB';
+    border-radius: 5px;
+    font-size: medium;
+    padding: 5px;
+  }
+
+  .annulerReservation, input.annulation {
+    background-color:#8F3D4C ;
+    color: #FFBD99;
+  }
+
+  ::-webkit-calendar-picker-indicator{
+    background-color: #8F3D4C;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    }

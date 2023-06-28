@@ -1,0 +1,95 @@
+{
+    "enregistrement de logement" : {
+        "enregistrement details" : "INSERT INTO housing (name,position,address,capacity,price,discount,description) VALUES (:name,:position,:address,:capacity,:price,:discount,:description)",
+        "enregistrement avantages" :   "INSERT INTO housing_benefits (housing_id,content) VALUES (:housing_id,:content)",
+        "enregistrement images" :  "INSERT INTO housing_pictures (housing_id,url) VALUES (:housing_id,:url)"    
+    },
+    "les logements": {
+        "nombre de logements enregistres" : "SELECT max(id) as nbr_logement FROM housing",
+        "tous les logements enregistres" : "SELECT h.id,h.name,h.position,h.address,h.capacity,h.price,h.discount,h.description,hb.content,GROUP_CONCAT(DISTINCT hp.url) AS Images FROM `housing` AS h INNER JOIN `housing_pictures` AS hp INNER JOIN `housing_benefits` AS hb WHERE hb.housing_id = h.id AND hp.housing_id=h.id GROUP BY h.id",
+        "afficher un logement particulier" : "SELECT h.name,h.position,h.address,h.capacity,h.price,h.discount,h.description,hb.content,GROUP_CONCAT(DISTINCT hp.url) AS Images FROM `housing` AS h INNER JOIN `housing_pictures` AS hp INNER JOIN `housing_benefits` AS hb WHERE hb.housing_id = h.id AND hp.housing_id=h.id AND h.id=:id"
+    },
+    "modification de logement" : {
+        "Est-ce que le logement à modifier existe?" : "INSERT INTO housing (name,position,address,capacity,price,discount,description) VALUES (:name,:position,:address,:capacity,:price,:discount,:description)",
+        "Mise à jour des details du logement modifie" :   "UPDATE housing SET name = :name, position= :position, address= :address, capacity= :capacity, price= :price, discount= :discount, description= :description WHERE id= :id",
+        "Mise à jour des avantages du logement modifie" :   "UPDATE housing_benefits SET content = :content WHERE housing_id = :housing_id",
+        "Suppression des anciennes images du logement modifie" :   "DELETE FROM housing_pictures WHERE housing_id = :housing_id",
+        "Enregistrement des nouvelles images du logement modifie" :   "INSERT INTO housing_pictures (housing_id,url) VALUES (:housing_id,:url)"
+    },
+    "supression logement": {
+        "suppression des infos de logement dans housing" : "DELETE FROM `housing` WHERE id = :id",
+        "suppression des infos de logement dans housing_benefits" : "DELETE FROM housing_benefits WHERE housing_id = :housing_id",
+        "suppression des infos de logement dans housing_pictures" : "DELETE FROM housing_pictures WHERE housing_id = :housing_id",
+        "suppression des infos de logement dans housing_unavailabilities" : "DELETE FROM housing_unavailabilities WHERE housing_id = :housing_id"
+    },
+    "Inscription client" : {
+        "Cet utilisateur n'existe-t-il pas déjà?" : " SELECT * FROM `users` WHERE mail = :mail",
+        "enregistrement des informatons dans la table users" : " INSERT INTO `users` (mail,password,first_name,last_name) VALUES (:mail,:password,:first_name,:last_name)"
+    },
+    "Connexion client" : {
+        "Vérification des informatons dans la table users" : " SELECT * FROM `users` WHERE mail = :mail",
+        "On lui file un token dans la table tokens" : "INSERT INTO tokens (token,user_id) VALUES (:token,:user_id)"
+    },
+    "Modification d'un compte client" : {
+        "Modification des infos du profil par l'utilisateur" : "UPDATE users SET mail=:mail,first_name=:first_name,last_name=:last_name WHERE id = :id",
+        "Modification du mot de passe de l'utilisateur" : "UPDATE users SET password=:password WHERE id = :id",
+        "Modification du role de l'utilisateur par un administrateur" : "UPDATE users SET role = :role WHERE id = :id"
+    },
+    "Comptes utilisateurs" : {
+        "Récuperer des informations de compte" : "SELECT * FROM `users` WHERE id = :id",
+        "Tous les comptes sauf le sudos" : "SELECT * FROM `users` WHERE role != 'sudo'"
+     },
+     "Suppression d'un compte utilisateur" : {
+         "Suppression de ses informations dans users" : "DELETE FROM users WHERE id = :id",
+         "Suppression de ses informations dans testimonies" : "DELETE FROM testimonies WHERE client_id = :id",
+         "Suppression de ses informations dans booking" : "DELETE FROM booking WHERE client_id = :id",
+         "Suppression de ses informations dans tokens" : "DELETE FROM tokens WHERE user_id = :id"
+      },
+      "Désactivation d'un compte utilisateur" : {
+          "On lui file une valeur 0 pour la colonne active" : "UPDATE users SET active = 0 WHERE id = :id"
+       },
+       "Réactivation d'un compte utilisateur" : {
+        "On lui file une valeur 1 pour la colonne active" : "UPDATE users SET active = 1 WHERE id = :id"
+     },
+     "Changer le role d'un compte utilisateur" : {
+        "On lui file le role souhaité" : "UPDATE users SET role = :role WHERE id = :id"
+     },
+       "Reconnexion d'un compte utilisateur" : {
+        "Vérification de son token et récupération des informations" : "SELECT tokens.user_id,users.role FROM tokens INNER JOIN users WHERE users.id = tokens.user_id AND tokens.token = :token GROUP BY users.id"
+     },
+     "Déconnexion" :{
+        "Suppression de son/de ces jeton.s dans tokens" : "DELETE FROM tokens WHERE user_id = :id"
+     },
+     "Avis" :{
+        "Afficher les avis d'un logement particulier":"SELECT tst.id AS id_avis,tst.housing_id,tst.date,tst.client_id,tst.content, usr.last_name, usr.first_name, usr.role FROM `testimonies` AS tst INNER JOIN `users`AS usr WHERE housing_id= :housing_id AND tst.client_id=usr.id ORDER BY tst.id DESC",
+        "Est-t-il autorisé à ajouter un avis sur ce logement?" : "SELECT * FROM booking WHERE housing_id=:housing_id AND client_id=:client_id AND status='done'",
+        "Est-t-il autorisé à supprimer cet avis sur ce logement?" : "SELECT client_id FROM testimonies WHERE housing_id=:housing_id AND id=:id_avis",
+        "Ajouter d'avis" : "INSERT INTO testimonies (housing_id,client_id,content) VALUES (:housing_id,:client_id,:content)",
+        "Modifier l'avis" : "UPDATE testimonies SET content = :content WHERE id = :id",
+        "Supprimer l'avis" : "DELETE FROM `testimonies` WHERE id =:id"
+     },
+     "Réservation" : {
+        "Afficher toutes les réservations sur un logement":"SELECT * FROM `booking` WHERE housing_id=:housing_id",
+        "Afficher toutes les réservations futures ou en cours":"SELECT bk.id,hs.name,bk.start_date,bk.end_date,us.first_name, us.last_name,bk.status FROM `booking` AS bk INNER JOIN housing AS hs INNER JOIN users AS us WHERE (bk.start_date >= CURRENT_DATE OR (bk.start_date <= CURRENT_DATE AND bk.end_date >= CURRENT_DATE)) AND bk.client_id = us.id AND bk.housing_id= hs.id;",
+        "Afficher les réservations passés d'un client spécifique":"SELECT bk.id,hs.name,bk.start_date,bk.end_date,bk.status FROM `booking` AS bk INNER JOIN housing AS hs WHERE bk.client_id=:client_id AND bk.end_date < CURRENT_DATE AND bk.housing_id= hs.id;",
+        "Afficher les réservations en cours d'un client spécifique":"SELECT bk.id,hs.name,bk.start_date,bk.end_date,bk.status FROM `booking` AS bk INNER JOIN housing AS hs WHERE bk.client_id=:client_id AND bk.end_date >= CURRENT_DATE AND bk.start_date <= CURRENT_DATE AND bk.housing_id= hs.id;",
+        "Afficher les réservations futures d'un client spécifique":"SELECT bk.id,hs.name,bk.start_date,bk.end_date,bk.status FROM `booking` AS bk INNER JOIN housing AS hs WHERE bk.client_id=:client_id AND bk.start_date > CURRENT_DATE AND bk.housing_id= hs.id;",
+
+        "Ouverture d'une action de maintenace":"INSERT INTO maintenance (status, housing_id, due_date) VALUES ('to define', :housing_id, :due_date)",
+
+        "Est-ce que le logement est disponible pour un ajout d'abord ?":"SELECT * FROM `booking`  WHERE ( (start_date >= :debut AND  end_date <= :fin AND  status <> 'cancelled') OR (DATE_ADD(:debut, INTERVAL - 1 DAY) >= start_date AND (DATE_ADD(:fin, INTERVAL + 1 DAY) <= end_date AND status <> 'cancelled')) )",
+        "Est-ce que le logement est disponible pour une modification d'abord ?":"SELECT * FROM `booking`  WHERE ( (start_date >= :debut AND  end_date <= :fin AND  status <> 'cancelled' AND id <> :id) OR (DATE_ADD(:debut, INTERVAL - 1 DAY) >= start_date AND (DATE_ADD(:fin, INTERVAL + 1 DAY) <= end_date AND status <> 'cancelled' AND id <> :id)) )",
+        "Réservation de logement" : "INSERT INTO `booking` (housing_id,client_id,start_date,end_date,status) VALUES (:housing_id,:client_id,:start_date,:end_date,:status)",
+        "Obtenir les données d'une réservation" : "SELECT * FROM booking AS bk INNER JOIN housing AS hs INNER JOIN users AS us WHERE bk.client_id = us.id AND bk.housing_id = hs.id AND bk.id=:id",
+        "Annuler une réservation" : "UPDATE booking SET status='cancelled' WHERE id=:id",
+        "Modification de réservation" : "UPDATE `booking` SET start_date = :start_date,end_date = :end_date WHERE id=:id",
+
+
+
+        "1er Mise à jour des status des résevations" : "UPDATE booking SET status='in progress' WHERE start_date <= CURRENT_DATE AND end_date >= CURRENT_DATE AND status = 'reserved'",
+        "2ème Mise à jour des status des résevations" : "UPDATE booking SET status='done' WHERE end_date < CURRENT_DATE AND status = 'in progress'"
+     },
+     "Messages" : {
+        "Récuperer les 10 derniers messages":"SELECT * FROM messages AS msg INNER JOIN users AS us WHERE msg.booking_id=:booking_id AND msg.sender_id = us.id ORDER BY msg.id DESC LIMIT 10 "
+     }
+}
